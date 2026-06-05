@@ -1,5 +1,6 @@
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import { ReactNode } from "react";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -80,10 +81,14 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: ReactNode;
+}>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${spaceGrotesk.variable}`}>
+      <body>
         {children}
       </body>
     </html>
