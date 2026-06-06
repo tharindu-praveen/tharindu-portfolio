@@ -118,7 +118,7 @@ const projectGroups = [
           "A robot project using Kinect v2, OpenCV, and Python for color/depth processing, obstacle detection, human detection, and path visualization.",
         tech: ["Python", "OpenCV", "Kinect v2"],
         status: "Research / Robotics",
-        image: "/images/projects/kinect-robot/01.png",
+        image: "/images/projects/kinect-robot/01.webp",
         link: "kinect-obstacle-avoiding-robot",
       },
       {
