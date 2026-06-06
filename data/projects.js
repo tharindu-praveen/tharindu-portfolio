@@ -325,7 +325,7 @@ export const projects = [
     category: "Robotics & Vision",
     type: "Computer Vision Robotics",
     status: "Research / Robotics",
-    image: "/images/projects/kinect-robot/01.png",
+    image: "/images/projects/kinect-robot/01.webp",
     description:
       "A robot project using Kinect v2, OpenCV, and Python for color/depth processing, obstacle detection, human detection, and path visualization.",
     overview:
@@ -347,7 +347,7 @@ export const projects = [
     media: [
       {
         type: "image",
-        src: "/images/projects/kinect-robot/02.png",
+        src: "/images/projects/kinect-robot/02.webp",
         alt: "Kinect robot preview",
       },
       {
@@ -368,7 +368,7 @@ export const projects = [
       {
         type: "video",
         src: "https://player.vimeo.com/video/1198833960?",
-        poster: "/images/projects/kinect-robot/02.png",
+        poster: "/images/projects/kinect-robot/02.webp",
         alt: "Kinect robot demo video",
       },
     ],
@@ -905,7 +905,7 @@ export const projects = [
       "CSS3",
     ],
 
-    liveLink: "https://somet.lk",
+    liveLink: "https://sometuwu.lk/",
     githubLink: "#",
 
     media: [
