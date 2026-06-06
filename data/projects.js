@@ -906,7 +906,7 @@ export const projects = [
     ],
 
     liveLink: "https://sometuwu.lk/",
-    githubLink: "#",
+    githubLink: "#", 
 
     media: [
       {
