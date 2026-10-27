@@ -10,6 +10,7 @@ const navItems = [
   { label: "Projects", href: "#projects" },
   { label: "Experience", href: "#experience" },
   { label: "Education", href: "#education" },
+  { label: "Badges", href: "#certifications" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -67,7 +68,7 @@ export default function Navbar() {
               <a
                 key={item.label}
                 href={item.href}
-                className="rounded-full px-4 py-2 text-sm text-zinc-400 transition hover:bg-white/[0.05] hover:text-white"
+                className="rounded-full px-3 py-2 text-sm text-zinc-400 transition hover:bg-white/[0.05] hover:text-white"
               >
                 {item.label}
               </a>
@@ -91,6 +92,8 @@ export default function Navbar() {
               onClick={() => setIsOpen((prev) => !prev)}
               className="flex h-10 w-10 items-center justify-center border border-white/10 bg-white/[0.03] text-zinc-300 transition hover:border-red-600/50 hover:text-white lg:hidden"
               aria-label={isOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isOpen}
+              aria-controls="mobile-navigation"
             >
               {isOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
@@ -102,6 +105,7 @@ export default function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
+            id="mobile-navigation"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -115,7 +119,7 @@ export default function Navbar() {
               exit={{ opacity: 0, y: -18, scale: 0.98 }}
               transition={{ duration: 0.35, ease: "easeOut" }}
               onClick={(e) => e.stopPropagation()}
-              className="mx-auto mt-[78px] w-[92%] overflow-hidden border border-white/10 bg-[#080808] shadow-[0_0_40px_rgba(0,0,0,0.55)]"
+              className="mx-auto mt-[78px] max-h-[calc(100dvh-90px)] w-[92%] overflow-y-auto border border-white/10 bg-[#080808] shadow-[0_0_40px_rgba(0,0,0,0.55)]"
             >
               <div className="border-b border-white/10 p-5">
                 <p className="font-tech text-xs uppercase tracking-[0.32em] text-red-500">

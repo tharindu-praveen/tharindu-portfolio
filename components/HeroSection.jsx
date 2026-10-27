@@ -26,6 +26,14 @@ const photoSets = [
 
 const smoothEase = [0.22, 1, 0.36, 1];
 
+const heroBadges = [
+  { name: "Open Science 101", image: "/images/badges/nasa-open-science-101.png" },
+  {
+    name: "Open Science Essentials",
+    image: "/images/badges/nasa-open-science-essentials.png",
+  },
+];
+
 export default function HeroSection() {
   const [activePhoto, setActivePhoto] = useState(0);
 
@@ -64,7 +72,7 @@ export default function HeroSection() {
 
             <div className="flex flex-col items-center gap-4 text-zinc-500">
               <a
-                href="#"
+                href="https://github.com/tharindu-praveen"
                 className="transition hover:text-red-500"
                 aria-label="GitHub"
               >
@@ -72,7 +80,7 @@ export default function HeroSection() {
               </a>
 
               <a
-                href="#"
+                href="https://www.linkedin.com/in/tharindu-praveen"
                 className="transition hover:text-red-500"
                 aria-label="LinkedIn"
               >
@@ -80,7 +88,7 @@ export default function HeroSection() {
               </a>
 
               <a
-                href="#"
+                href="mailto:tharindupraveen522@gmail.com"
                 className="transition hover:text-red-500"
                 aria-label="Email"
               >
@@ -165,6 +173,15 @@ export default function HeroSection() {
                   Contact Me
                 </a>
               </div>
+
+              <a
+                href="#certifications"
+                className="mt-6 inline-flex items-center gap-3 text-sm leading-6 text-zinc-400 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-red-500"
+              >
+                <span aria-hidden="true" className="h-1.5 w-1.5 shrink-0 rounded-full bg-red-500" />
+                <span>Latest learning: NASA Open Science</span>
+                <ArrowUpRight size={15} aria-hidden="true" className="shrink-0 text-red-500" />
+              </a>
             </motion.div>
           </div>
 
@@ -330,6 +347,42 @@ export default function HeroSection() {
             </motion.div>
           </div>
         </div>
+      </div>
+
+      <div className="relative z-30 flex justify-end px-[6%] pb-8 pt-2 xl:absolute xl:bottom-7 xl:right-[4%] xl:p-0">
+        <a
+          href="#certifications"
+          aria-label="Explore my NASA Open Science 101 and Open Science Essentials badges"
+          className="hero-badge-cluster group relative inline-flex items-center gap-4 rounded-2xl px-3 py-2 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300 sm:gap-5"
+        >
+          <span
+            aria-hidden="true"
+            className="pointer-events-none absolute -inset-5 rounded-full bg-cyan-300/[0.06] blur-2xl"
+          />
+          <span className="relative text-right">
+            <span className="font-tech block text-[10px] font-medium uppercase tracking-[0.28em] text-zinc-400 transition-colors group-hover:text-cyan-200">
+              NASA
+            </span>
+            <span className="font-tech mt-1 block text-[9px] uppercase tracking-[0.18em] text-zinc-500">
+              Open Science
+            </span>
+          </span>
+          <span className="relative flex items-center gap-2 sm:gap-3">
+            {heroBadges.map((badge) => (
+              <span key={badge.name} className="hero-floating-badge relative block h-[68px] w-[68px] shrink-0 sm:h-20 sm:w-20">
+                <Image
+                  src={badge.image}
+                  alt={`NASA ${badge.name} badge`}
+                  width={1500}
+                  height={1500}
+                  sizes="(min-width: 640px) 80px, 68px"
+                  className="h-full w-full object-contain drop-shadow-[0_6px_14px_rgba(0,0,0,0.5)] transition-[filter] duration-300 group-hover:drop-shadow-[0_0_12px_rgba(174,221,228,0.3)]"
+                />
+              </span>
+            ))}
+          </span>
+          <ArrowUpRight aria-hidden="true" size={13} className="relative text-zinc-500 transition-colors group-hover:text-cyan-200" />
+        </a>
       </div>
     </section>
   );

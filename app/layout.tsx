@@ -42,7 +42,7 @@ export const metadata = {
     title: "Tharindu Praveen | Software Engineer & Technology Builder",
     description:
       "Explore the portfolio of Tharindu Praveen, featuring software, web development, automation, robotics, and engineering-focused projects.",
-    url: "https://your-domain.vercel.app",
+    url: "https://tharindu-praveen.vercel.app/",
     siteName: "Tharindu Praveen Portfolio",
     images: [
       {

@@ -13,6 +13,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 84px;
 }
 
 body {
@@ -132,7 +133,35 @@ body {
   background: rgba(220, 38, 38, 0.8);
 }
 
+@keyframes hero-badge-float {
+  0%, 100% {
+    transform: translateY(0) rotate(var(--badge-tilt));
+  }
+  50% {
+    transform: translateY(-7px) rotate(var(--badge-tilt));
+  }
+}
+
+.hero-floating-badge {
+  --badge-tilt: -8deg;
+  animation: hero-badge-float 6s ease-in-out infinite;
+}
+
+.hero-floating-badge:nth-child(2) {
+  --badge-tilt: 8deg;
+  animation-delay: -3s;
+}
+
+.hero-badge-cluster:hover .hero-floating-badge,
+.hero-badge-cluster:focus-visible .hero-floating-badge {
+  animation-play-state: paused;
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .hero-floating-badge {
+    animation: none;
+  }
+
   * {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
